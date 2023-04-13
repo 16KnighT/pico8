@@ -12,6 +12,7 @@ function _init()
 		y=0,
 		click=false
 		}
+	material=0
 end
 
 -->8
@@ -38,12 +39,10 @@ function _update60()
 	updatemouse()
 	--leftclick == powder
 	if mouse.click==1 then
-		create(10)
+		create(material)
 	end
-	--rightclick == liquid
-	if mouse.click==2 then
-		create(12)
-	end
+	if btnp(➡️) then material=material+1 end
+	if btnp(⬅️) then material=material-1 end
 end
 -->8
 function displace(px,py)
